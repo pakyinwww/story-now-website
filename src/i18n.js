@@ -42,7 +42,7 @@ const resources = {
         description: 'Choose your preferred storefront. Physical and digital editions available worldwide.',
         comingSoon: 'Coming Soon',
         platforms: {
-          steam: 'Steam — Digital Deluxe Edition',
+          steam: 'Steam',
           site: 'Official Store — Limited Box Edition',
         },
         note: 'Pre-orders will open soon. Follow us for the announcement.',
@@ -114,7 +114,7 @@ const resources = {
         description: '选择你喜欢的平台。实体版与数字版全球同步发售。',
         comingSoon: '即将推出',
         platforms: {
-          steam: 'Steam — 数字豪华版',
+          steam: 'Steam',
           site: '官网商店 — 限定盒装版',
         },
         note: '预售即将开启，敬请关注官方公告。',
@@ -186,7 +186,7 @@ const resources = {
         description: '選擇你喜歡的平台。實體版與數位版全球同步發售。',
         comingSoon: '即將推出',
         platforms: {
-          steam: 'Steam — 數位豪華版',
+          steam: 'Steam',
           site: '官方商店 — 限定盒裝版',
         },
         note: '預售即將開啟，敬請關注官方公告。',
@@ -258,7 +258,7 @@ const resources = {
         description: 'お好みのストアをお選びください。パッケージ版・ダウンロード版を世界同時発売。',
         comingSoon: '近日発売',
         platforms: {
-          steam: 'Steam — デラックスエディション',
+          steam: 'Steam',
           site: '公式ストア — 限定ボックス版',
         },
         note: '予約受付は近日開始予定。続報をお待ちください。',

@@ -609,7 +609,7 @@ function App() {
                   desc: t('download.placeholder3Desc'),
                   status: t('download.placeholder3Status'),
                   version: '—',
-                  size: '860 MB',
+                  size: 'TBA',
                   date: 'TBA',
                   color: 'gray',
                 },
