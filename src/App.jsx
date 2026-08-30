@@ -233,21 +233,25 @@ function App() {
               position: 'absolute',
               inset: 0,
               background:
-                'linear-gradient(180deg, rgba(10,8,18,0.35) 0%, rgba(10,8,18,0.15) 35%, rgba(10,8,18,0.85) 88%, #0a0812 100%), linear-gradient(90deg, rgba(10,8,18,0.75) 0%, rgba(10,8,18,0.2) 55%, transparent 85%)',
+                'linear-gradient(180deg, rgba(10,8,18,0.35) 0%, rgba(10,8,18,0.15) 35%, rgba(10,8,18,0.85) 88%, #0a0812 100%), linear-gradient(90deg, transparent 15%, rgba(10,8,18,0.2) 45%, rgba(10,8,18,0.75) 100%)',
             }}
           />
-          <Container size="xl" style={{ position: 'relative', zIndex: 1, width: '100%' }} py={{ base: 80, md: 120 }}>
-            <Stack gap="xl" maw={640}>
+          <Container
+            size="xl"
+            style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', justifyContent: 'flex-end' }}
+            py={{ base: 80, md: 120 }}
+          >
+            <Stack gap="xl" maw={640} align="flex-end" style={{ textAlign: 'right', width: '100%' }}>
               <Badge
                 size="lg"
                 variant="light"
                 color="violet"
                 radius="xl"
-                style={{ alignSelf: 'flex-start', textTransform: 'none', letterSpacing: '0.06em' }}
+                style={{ alignSelf: 'flex-end', textTransform: 'none', letterSpacing: '0.06em' }}
               >
                 ✦ Visual Novel • 2026
               </Badge>
-              <Box>
+              <Box style={{ textAlign: 'right', width: '100%' }}>
                 <Title
                   order={1}
                   fz={{ base: 48, sm: 64, md: 72 }}
@@ -255,7 +259,8 @@ function App() {
                   lh={0.95}
                   lts="-0.02em"
                   c="white"
-                  style={{ textShadow: '0 4px 32px rgba(0,0,0,0.6)' }}
+                  ta="right"
+                  style={{ textShadow: '0 4px 32px rgba(0,0,0,0.6)', textAlign: 'right' }}
                 >
                   {t('hero.title').split(' ').map((w, i) => (
                     <Text key={i} span inherit c={i === 0 ? 'violet.3' : 'white'}>
@@ -263,14 +268,20 @@ function App() {
                     </Text>
                   ))}
                 </Title>
-                <Text fz={{ base: 18, sm: 22 }} c="violet.1" fw={300} lts="0.14em" tt="uppercase" mt="sm">
+                <Text
+                  fz={{ base: 18, sm: 22 }}
+                  c="violet.1"
+                  fw={300}
+                  lts="0.14em"
+                  tt="uppercase"
+                  mt="sm"
+                  ta="right"
+                  style={{ textAlign: 'right' }}
+                >
                   {t('hero.subtitle')}
                 </Text>
               </Box>
-              <Text fz={{ base: 'md', sm: 'lg' }} c="gray.2" lh={1.7} maw={520} style={{ textShadow: '0 1px 12px rgba(0,0,0,0.8)' }}>
-                {t('hero.description')}
-              </Text>
-              <Group gap="md" mt="sm">
+              <Group gap="md" mt="sm" justify="flex-end" style={{ width: '100%' }}>
                 <Button
                   size="lg"
                   radius="xl"
@@ -291,7 +302,15 @@ function App() {
                   {t('nav.order')}
                 </Button>
               </Group>
-              <Text fz="xs" c="gray.5" lts="0.18em" tt="uppercase" mt="xl" style={{ opacity: 0.7 }}>
+              <Text
+                fz="xs"
+                c="gray.5"
+                lts="0.18em"
+                tt="uppercase"
+                mt="xl"
+                ta="right"
+                style={{ opacity: 0.7, textAlign: 'right', width: '100%' }}
+              >
                 ↓ {t('hero.scroll')}
               </Text>
             </Stack>

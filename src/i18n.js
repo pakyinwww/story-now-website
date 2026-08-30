@@ -14,9 +14,7 @@ const resources = {
       },
       hero: {
         title: 'STORY NOW',
-        subtitle: 'A Visual Novel Experience',
-        description:
-          'Where every choice matters. Step into a world woven with memories, promises, and fleeting seasons. Your story begins now.',
+        subtitle: 'Create your own Visual Novel with A.I.',
         cta: 'Begin Your Story',
         scroll: 'Scroll to explore',
       },
@@ -98,8 +96,7 @@ const resources = {
       },
       hero: {
         title: '现在·物语',
-        subtitle: '沉浸式视觉小说体验',
-        description: '每一个选择都至关重要。踏入由回忆、约定与转瞬即逝的季节编织的世界。你的故事，现在开始。',
+        subtitle: '用 A.I. 创作你的专属视觉小说',
         cta: '开始你的故事',
         scroll: '向下探索',
       },
@@ -179,8 +176,7 @@ const resources = {
       },
       hero: {
         title: '此刻・物語',
-        subtitle: '沉浸式視覺小說體驗',
-        description: '每一個選擇都至關重要。踏入由回憶、約定與轉瞬即逝的季節編織的世界。你的故事，現在開始。',
+        subtitle: '用 A.I. 創作你的專屬視覺小說',
         cta: '開始你的故事',
         scroll: '向下探索',
       },
@@ -260,9 +256,7 @@ const resources = {
       },
       hero: {
         title: 'STORY NOW',
-        subtitle: 'ビジュアルノベル体験',
-        description:
-          'すべての選択が意味を持つ。記憶と約束、そして儚い季節が織りなす世界へ。あなたの物語は、今始まる。',
+        subtitle: 'A.I.であなただけのビジュアルノベルを創ろう',
         cta: '物語を始める',
         scroll: 'スクロールして探索',
       },
