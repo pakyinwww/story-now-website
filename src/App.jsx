@@ -233,7 +233,7 @@ function App() {
               position: 'absolute',
               inset: 0,
               background:
-                'linear-gradient(180deg, rgba(10,8,18,0.35) 0%, rgba(10,8,18,0.15) 35%, rgba(10,8,18,0.85) 88%, #0a0812 100%), linear-gradient(90deg, transparent 15%, rgba(10,8,18,0.2) 45%, rgba(10,8,18,0.75) 100%)',
+                'linear-gradient(105deg, rgba(10,8,18,0.15) 0%, rgba(10,8,18,0.15) 35%, rgba(10,8,18,0.45) 88%, #0a0812 100%), linear-gradient(270deg, rgba(10,8,18,0.55) 0%, rgba(10,8,18,0.05) 55%, transparent 85%)',
             }}
           />
           <Container
@@ -269,7 +269,7 @@ function App() {
                   ))}
                 </Title>
                 <Text
-                  fz={{ base: 18, sm: 22 }}
+                  fz={{ base: 13, sm: 15 }}
                   c="violet.1"
                   fw={300}
                   lts="0.14em"
@@ -335,9 +335,11 @@ function App() {
                 <Text c="gray.3" lh={1.8} fz="md">
                   {t('story.p1')}
                 </Text>
-                <Text c="gray.3" lh={1.8} fz="md">
-                  {t('story.p2')}
-                </Text>
+                {t('story.p2') ? (
+                  <Text c="gray.3" lh={1.8} fz="md">
+                    {t('story.p2')}
+                  </Text>
+                ) : null}
                 <Paper
                   withBorder
                   p="md"
@@ -393,9 +395,11 @@ function App() {
               <Title order={2} fz={{ base: 32, md: 42 }} fw={800} c="white" ta="center">
                 {t('characters.name')}
               </Title>
-              <Text c="violet.2" fz="sm" lts="0.12em" tt="uppercase">
-                {t('characters.role')}
-              </Text>
+              {t('characters.role') ? (
+                <Text c="violet.2" fz="sm" lts="0.12em" tt="uppercase">
+                  {t('characters.role')}
+                </Text>
+              ) : null}
               <Box w={48} h={3} bg="violet.5" style={{ borderRadius: 2 }} mt="xs" />
             </Stack>
 
@@ -444,9 +448,11 @@ function App() {
                   <Text c="white" fw={700} fz="lg">
                     {t('characters.name')}
                   </Text>
-                  <Text c="violet.2" fz="xs" lts="0.1em" tt="uppercase">
-                    {t('characters.role')}
-                  </Text>
+                  {t('characters.role') ? (
+                    <Text c="violet.2" fz="xs" lts="0.1em" tt="uppercase">
+                      {t('characters.role')}
+                    </Text>
+                  ) : null}
                 </Box>
               </div>
 
@@ -462,18 +468,6 @@ function App() {
                   gap: 20,
                 }}
               >
-                <Group gap="xs">
-                  <Badge color="violet" variant="light">
-                    {t('characters.tag1')}
-                  </Badge>
-                  <Badge color="pink" variant="light">
-                    {t('characters.tag2')}
-                  </Badge>
-                  <Badge color="gray" variant="light">
-                    {t('characters.tag3')}
-                  </Badge>
-                </Group>
-
                 <Stack gap="md">
                   <Text c="gray.2" lh={1.8}>
                     {t('characters.desc1')}
@@ -527,8 +521,6 @@ function App() {
               {[
                 { key: 'steam', icon: '◈', color: 'violet' },
                 { key: 'site', icon: '✦', color: 'pink' },
-                { key: 'amazon', icon: '⬢', color: 'grape' },
-                { key: 'retail', icon: '⬣', color: 'indigo' },
               ].map((item) => (
                 <Paper
                   key={item.key}
@@ -607,19 +599,10 @@ function App() {
                   title: t('download.placeholder1Title'),
                   desc: t('download.placeholder1Desc'),
                   status: t('download.placeholder1Status'),
-                  version: 'v1.01',
-                  size: '1.2 GB',
+                  version: '—',
+                  size: '30 MB',
                   date: '2026-09-01',
                   color: 'violet',
-                },
-                {
-                  title: t('download.placeholder2Title'),
-                  desc: t('download.placeholder2Desc'),
-                  status: t('download.placeholder2Status'),
-                  version: 'v1.10',
-                  size: '3.4 GB',
-                  date: '2026-10-15',
-                  color: 'pink',
                 },
                 {
                   title: t('download.placeholder3Title'),
