@@ -29,12 +29,12 @@ jobs:
       - name: List build output
         run: ls -lah dist
 
-      - name: Deploy to VPS via SCP (password)
+      - name: Deploy to VPS via SCP (SSH key)
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
-          password: ${{ secrets.VPS_PASSWORD }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT || 22 }}
           source: "dist/*"
           target: ${{ secrets.VPS_TARGET_DIR }}
@@ -49,7 +49,7 @@ jobs:
       #   with:
       #     host: ${{ secrets.VPS_HOST }}
       #     username: ${{ secrets.VPS_USERNAME }}
-      #     password: ${{ secrets.VPS_PASSWORD }}
+      #     key: ${{ secrets.VPS_SSH_KEY }}
       #     port: ${{ secrets.VPS_PORT || 22 }}
       #     script: |
       #       echo "Deployed to ${{ secrets.VPS_TARGET_DIR }}"
