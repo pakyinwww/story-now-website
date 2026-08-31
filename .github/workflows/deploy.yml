@@ -1,0 +1,61 @@
+name: Build and Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      # Optional: verify build output
+      - name: List build output
+        run: ls -lah dist
+
+      - name: Deploy to VPS via SCP (password)
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          source: "dist/*"
+          target: ${{ secrets.VPS_TARGET_DIR }}
+          strip_components: 1
+          overwrite: true
+          rm: false
+
+      # Optional: Run remote commands after deploy (e.g., fix permissions, reload nginx)
+      # Uncomment and customize if needed
+      # - name: Post-deploy commands via SSH
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.VPS_HOST }}
+      #     username: ${{ secrets.VPS_USERNAME }}
+      #     password: ${{ secrets.VPS_PASSWORD }}
+      #     port: ${{ secrets.VPS_PORT || 22 }}
+      #     script: |
+      #       echo "Deployed to ${{ secrets.VPS_TARGET_DIR }}"
+      #       # Example: set permissions
+      #       # chown -R www-data:www-data ${{ secrets.VPS_TARGET_DIR }}
+      #       # chmod -R 755 ${{ secrets.VPS_TARGET_DIR }}
+      #       # Example: reload nginx if serving static files
+      #       # sudo systemctl reload nginx
+      #       ls -lah ${{ secrets.VPS_TARGET_DIR }}
