@@ -33,18 +33,20 @@ const resources = {
         desc1:
           "Actually, I'm not a character in your story. I just keep you company while the text and images are being generated.",
         desc2:
-          "I've been waiting alongside the developer — he's building this on a 5060. If you'd like, you can write me into your story.",
+          "I've been waiting alongside the developer — he's building this on a 5060, so it's pretty slow. If you like me and want me to stay, try using your onboard graphics — we'll be together forever.",
         quote: '"I\'ll keep waiting if your card isn\'t a 5090."',
       },
       order: {
         title: 'Order',
         heading: 'Where to Buy',
-        description: 'Choose your preferred storefront. Physical and digital editions available worldwide.',
+        description: 'Choose your preferred storefront. Actually, not much to choose.',
         comingSoon: 'Coming Soon',
         platforms: {
           steam: 'Steam',
           site: 'Official Store — Limited Box Edition',
         },
+        placeholderNote: 'We\'re working hard to publish the game.',
+        placeholderNoteSite: 'In the dream of the developer.',
         note: 'Pre-orders will open soon. Follow us for the announcement.',
       },
       download: {
@@ -54,7 +56,7 @@ const resources = {
         patches: 'Available Patches',
         none: 'No patches released yet. Check back after launch.',
         placeholder1Title: 'Builder Mode Patch',
-        placeholder1Desc: 'Hidden Easter eggs for fans to discover.',
+        placeholder1Desc: 'Make your StoryNow more powerful.',
         placeholder1Status: 'Coming at launch',
         placeholder3Title: 'More Voices Pack',
         placeholder3Desc: 'Additional voice options for more diverse characters.',
@@ -67,7 +69,7 @@ const resources = {
       },
       footer: {
         rights: '© 2026 STORY NOW. All rights reserved.',
-        disclaimer: 'A fictional visual novel project for demonstration.',
+        disclaimer: 'An experimental visual novel project.',
       },
       lang: {
         en: 'English',
@@ -105,18 +107,20 @@ const resources = {
         name: '等待的少女',
         role: '',
         desc1: '其实我并不是你故事中的角色。我只是在文字和图像生成时陪你一起等待。',
-        desc2: '我和开发者一起等待——因为他用 5060 在开发。如果你愿意，可以把我写进你的故事里。',
+        desc2: '我和开发者一起等待——他在用 5060 开发，太慢了。如果你喜欢我、想让我留下，就试试用核显吧，那样我们就能永远在一起了。',
         quote: '“显卡不是 5090 的话，我会一直陪你等下去。”',
       },
       order: {
         title: '购买',
         heading: '购买渠道',
-        description: '选择你喜欢的平台。实体版与数字版全球同步发售。',
+        description: '选择你喜欢的商店。其实也没什么可选择的。',
         comingSoon: '即将推出',
         platforms: {
           steam: 'Steam',
           site: '官网商店 — 限定盒装版',
         },
+        placeholderNote: '我们正在努力发布游戏。',
+        placeholderNoteSite: '在开发者的梦里。',
         note: '预售即将开启，敬请关注官方公告。',
       },
       download: {
@@ -126,7 +130,7 @@ const resources = {
         patches: '可用补丁',
         none: '暂无补丁发布，正式发售后请再次查看。',
         placeholder1Title: '创作者模式补丁',
-        placeholder1Desc: '为粉丝准备的隐藏彩蛋，等你来发现。',
+        placeholder1Desc: '让你的 StoryNow 更强大。',
         placeholder1Status: '发售时提供',
         placeholder3Title: '更多声线包',
         placeholder3Desc: '更多样化的角色语音选项。',
@@ -139,7 +143,7 @@ const resources = {
       },
       footer: {
         rights: '© 2026 STORY NOW 保留所有权利。',
-        disclaimer: '这是一个用于演示的虚构视觉小说项目。',
+        disclaimer: '一个实验性的视觉小说项目。',
       },
       lang: {
         en: 'English',
@@ -177,18 +181,20 @@ const resources = {
         name: '等待的少女',
         role: '',
         desc1: '其實我並不是你故事中的角色。我只是在文字和圖像生成時陪你一起等待。',
-        desc2: '我和開發者一起等待——因為他用 5060 在開發。如果你願意，可以把我寫進你的故事裡。',
+        desc2: '我和開發者一起等待——他在用 5060 開發，太慢了。如果你喜歡我、想讓我留下，就試試用內顯吧，那樣我們就能永遠在一起了。',
         quote: '「顯示卡不是 5090 的話，就一直陪你等下去。」',
       },
       order: {
         title: '購買',
         heading: '購買管道',
-        description: '選擇你喜歡的平台。實體版與數位版全球同步發售。',
+        description: '選擇你喜歡的商店。其實也沒什麼可選擇的。',
         comingSoon: '即將推出',
         platforms: {
           steam: 'Steam',
           site: '官方商店 — 限定盒裝版',
         },
+        placeholderNote: '我們正在努力發布遊戲。',
+        placeholderNoteSite: '在開發者的夢裡。',
         note: '預售即將開啟，敬請關注官方公告。',
       },
       download: {
@@ -198,7 +204,7 @@ const resources = {
         patches: '可用補丁',
         none: '暫無補丁發布，正式發售後請再次查看。',
         placeholder1Title: '創作者模式補丁',
-        placeholder1Desc: '為粉絲準備的隱藏彩蛋，等你來發現。',
+        placeholder1Desc: '讓你的 StoryNow 更強大。',
         placeholder1Status: '發售時提供',
         placeholder3Title: '更多聲線包',
         placeholder3Desc: '更多樣化的角色語音選項。',
@@ -211,7 +217,7 @@ const resources = {
       },
       footer: {
         rights: '© 2026 STORY NOW 保留所有權利。',
-        disclaimer: '這是一個用於演示的虛構視覺小說專案。',
+        disclaimer: '一個實驗性的視覺小說專案。',
       },
       lang: {
         en: 'English',
@@ -249,18 +255,20 @@ const resources = {
         name: '待ち続ける少女',
         role: '',
         desc1: '実は、私はあなたの物語の登場人物ではありません。テキストや画像が生成されるのを、あなたと一緒に待っているだけです。',
-        desc2: '開発者と一緒に待っています——彼は 5060 で開発しているから。よければ、私をあなたの物語に書き加えてください。',
+        desc2: '開発者と一緒に待っています——彼は 5060 で開発しているので、とても遅いんです。もし私が気に入って一緒にいてほしいなら、内蔵グラフィックスを使ってみて——そしたら、ずっと一緒にいられるよ。',
         quote: '「5090じゃないなら、ずっと一緒に待ってるよ。」',
       },
       order: {
         title: '購入',
         heading: '購入方法',
-        description: 'お好みのストアをお選びください。パッケージ版・ダウンロード版を世界同時発売。',
+        description: 'お好みのストアをお選びください。といっても、選ぶほど選択肢はありません。',
         comingSoon: '近日発売',
         platforms: {
           steam: 'Steam',
           site: '公式ストア — 限定ボックス版',
         },
+        placeholderNote: 'ゲーム公開に向けて鋭意準備中です。',
+        placeholderNoteSite: '開発者の夢の中で。',
         note: '予約受付は近日開始予定。続報をお待ちください。',
       },
       download: {
@@ -270,7 +278,7 @@ const resources = {
         patches: '利用可能なパッチ',
         none: 'まだパッチはリリースされていません。発売後にご確認ください。',
         placeholder1Title: 'ビルダーモードパッチ',
-        placeholder1Desc: 'ファン必見の隠しイースターエッグを収録。',
+        placeholder1Desc: 'あなたの StoryNow をもっとパワフルに。',
         placeholder1Status: '発売時に配信',
         placeholder3Title: '追加ボイスパック',
         placeholder3Desc: 'より多彩なキャラクターボイスを追加。',
@@ -283,7 +291,7 @@ const resources = {
       },
       footer: {
         rights: '© 2026 STORY NOW. All rights reserved.',
-        disclaimer: 'デモンストレーション用の架空ビジュアルノベルプロジェクトです。',
+        disclaimer: '実験的なビジュアルノベルプロジェクトです。',
       },
       lang: {
         en: 'English',

@@ -550,7 +550,7 @@ function App() {
                     </Text>
                   </Group>
                   <Text fz="xs" c="dimmed" mt="sm">
-                    Placeholder storefront link — to be announced.
+                    {item.key === 'site' ? t('order.placeholderNoteSite') : t('order.placeholderNote')}
                   </Text>
                   <Button variant="light" color="violet" size="xs" mt="md" disabled>
                     {t('order.comingSoon')}
@@ -601,7 +601,7 @@ function App() {
                   status: t('download.placeholder1Status'),
                   version: '—',
                   size: '30 MB',
-                  date: '2026-09-01',
+                  date: 'TBA',
                   color: 'violet',
                 },
                 {
