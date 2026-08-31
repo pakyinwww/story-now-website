@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: Prod
 
     steps:
       - name: Checkout code
@@ -29,13 +30,22 @@ jobs:
       - name: List build output
         run: ls -lah dist
 
+      - name: Debug secrets presence (masked)
+        run: |
+          echo "VPS_HOST set: ${{ secrets.VPS_HOST != '' }}"
+          echo "VPS_USERNAME set: ${{ secrets.VPS_USERNAME != '' }}"
+          echo "VPS_SSH_KEY set: ${{ secrets.VPS_SSH_KEY != '' }}"
+          echo "VPS_TARGET_DIR set: ${{ secrets.VPS_TARGET_DIR != '' }}"
+          echo "VPS_PORT set: ${{ secrets.VPS_PORT != '' }}"
+          if [ -z "${{ secrets.VPS_SSH_KEY }}" ]; then echo "::error::VPS_SSH_KEY is empty - check Settings > Secrets and variables > Actions"; exit 1; fi
+
       - name: Deploy to VPS via SCP (SSH key)
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          port: ${{ secrets.VPS_PORT || 22 }}
+          port: ${{ secrets.VPS_PORT }}
           source: "dist/*"
           target: ${{ secrets.VPS_TARGET_DIR }}
           strip_components: 1
@@ -50,7 +60,7 @@ jobs:
       #     host: ${{ secrets.VPS_HOST }}
       #     username: ${{ secrets.VPS_USERNAME }}
       #     key: ${{ secrets.VPS_SSH_KEY }}
-      #     port: ${{ secrets.VPS_PORT || 22 }}
+      #     port: ${{ secrets.VPS_PORT }}
       #     script: |
       #       echo "Deployed to ${{ secrets.VPS_TARGET_DIR }}"
       #       # Example: set permissions
