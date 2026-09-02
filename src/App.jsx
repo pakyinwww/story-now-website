@@ -559,17 +559,6 @@ function App() {
               ))}
             </SimpleGrid>
 
-            <Paper
-              mt="xl"
-              p="md"
-              radius="md"
-              withBorder
-              style={{ background: 'rgba(251,191,36,0.06)', borderColor: 'rgba(251,191,36,0.2)', textAlign: 'center' }}
-            >
-              <Text fz="sm" c="yellow.2">
-                ℹ {t('order.note')}
-              </Text>
-            </Paper>
           </Container>
         </Box>
 
