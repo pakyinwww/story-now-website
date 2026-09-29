@@ -370,7 +370,7 @@ function App() {
                 >
                   <Box
                     component="iframe"
-                    src="https://www.youtube.com/embed/jNQXAC9IVRw?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/79GQH1ZppMU?rel=0&modestbranding=1"
                     title="Story Trailer"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -378,7 +378,7 @@ function App() {
                   />
                 </Box>
                 <Text fz="xs" c="dimmed" ta="center" lts="0.08em">
-                  ▶ {t('story.videoCaption')} — YouTube • jNQXAC9IVRw (Me at the zoo — first public video)
+                  ▶ {t('story.videoCaption')} — YouTube • 79GQH1ZppMU
                 </Text>
               </Stack>
             </SimpleGrid>
