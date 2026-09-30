@@ -580,18 +580,22 @@ function App() {
 
             <Stack gap="md">
               <Text fz="xs" lts="0.14em" tt="uppercase" c="dimmed" fw={700}>
-                {t('download.patches')} — {t('download.none')}
+                {t('download.patches')}
               </Text>
 
               {[
                 {
                   title: t('download.placeholder1Title'),
                   desc: t('download.placeholder1Desc'),
-                  status: t('download.placeholder1Status'),
-                  version: '—',
-                  size: '30 MB',
-                  date: 'TBA',
-                  color: 'violet',
+                  status: t('download.available'),
+                  version: 'v1.0',
+                  size: '284 KB / 96 KB',
+                  date: '2026-09-30',
+                  color: 'green',
+                  files: [
+                    { label: 'MSI · 284 KB', href: 'patches/StoryNowBuilderMode-v1.0.msi' },
+                    { label: 'ZIP · 96 KB', href: 'patches/StoryNowBuilderMode-v1.0.zip' },
+                  ],
                 },
                 {
                   title: t('download.placeholder3Title'),
@@ -601,6 +605,7 @@ function App() {
                   size: 'TBA',
                   date: 'TBA',
                   color: 'gray',
+                  files: [],
                 },
               ].map((p, idx) => (
                 <Paper
@@ -639,9 +644,29 @@ function App() {
                         </Text>
                       </Group>
                     </Stack>
-                    <Button size="sm" radius="xl" variant="light" color="violet" disabled>
-                      {t('download.unavailable')}
-                    </Button>
+                    {p.files && p.files.length > 0 ? (
+                      <Stack gap="xs" align="flex-end" miw={160}>
+                        {p.files.map((f) => (
+                          <Button
+                            key={f.href}
+                            component="a"
+                            href={f.href}
+                            download
+                            size="sm"
+                            radius="xl"
+                            variant="filled"
+                            color="violet"
+                            fullWidth
+                          >
+                            ⬇ {f.label}
+                          </Button>
+                        ))}
+                      </Stack>
+                    ) : (
+                      <Button size="sm" radius="xl" variant="light" color="violet" disabled>
+                        {t('download.unavailable')}
+                      </Button>
+                    )}
                   </Group>
                 </Paper>
               ))}
